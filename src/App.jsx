@@ -1090,6 +1090,45 @@ export default function App() {
                 </div>
               </div>
 
+              {/* Card 3: Interactive Contribution Heatmap (Kotak-Kotak Hijau Aktivitas GitHub Real-time) */}
+              <div className="mt-6 p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-amber-200/90 shadow-md hover:shadow-xl hover:border-amber-400 transition-all space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-amber-100 pb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span className="text-xs sm:text-sm font-mono font-bold text-slate-900">
+                      GitHub Contribution Calendar (Public & Private Commits)
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 font-semibold">
+                    Live Git Activity
+                  </span>
+                </div>
+                
+                <div className="w-full overflow-x-auto py-2">
+                  <div className="min-w-[680px] flex justify-center">
+                    <img
+                      src="https://ghchart.rshah.org/d4af37/tasyaulfarahmazani"
+                      alt="Tasya Ulfa Rahmazani - GitHub Contribution Calendar"
+                      className="w-full max-w-4xl h-auto filter drop-shadow-sm"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between text-[11px] font-mono text-slate-500 pt-1">
+                  <span>Aktivitas harian koding & push commit sepanjang tahun</span>
+                  <div className="flex items-center gap-1.5 text-[10px]">
+                    <span>Less</span>
+                    <span className="w-2.5 h-2.5 rounded-sm bg-[#ebedf0] border border-slate-200"></span>
+                    <span className="w-2.5 h-2.5 rounded-sm bg-[#fde047]"></span>
+                    <span className="w-2.5 h-2.5 rounded-sm bg-[#f59e0b]"></span>
+                    <span className="w-2.5 h-2.5 rounded-sm bg-[#d97706]"></span>
+                    <span className="w-2.5 h-2.5 rounded-sm bg-[#b45309]"></span>
+                    <span>More</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-6 text-center">
                 <a
                   href="https://github.com/tasyaulfarahmazani"
