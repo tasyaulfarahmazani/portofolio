@@ -255,15 +255,15 @@ export default function App() {
       highlights: "Akurasi validasi 98.18% (Alfabet) & 100% (Dynamic Words). Dilengkapi REST API & Video Demo YouTube."
     },
     {
-      title: "Sistem Monitoring Jaringan & Deteksi Gangguan",
-      category: "Network & Infrastructure",
+      title: "Sistem Monitoring Jaringan & Deteksi Anomali AI",
+      category: "Network & IoT Systems",
       badge: "Industry Internship Project",
       icon: Network,
       isVerifiedRepo: false,
       repoUrl: "https://github.com/tasyaulfarahmazani",
-      description: "Sistem monitoring infrastruktur jaringan real-time untuk mendeteksi downtime, latensi, dan anomali gangguan konektivitas jaringan serta memberikan notifikasi alert cepat kepada tim network engineer.",
-      tech: ["Network Monitoring", "Linux Server", "SNMP / Ping Probe", "Python / Shell", "Dashboard Analytics"],
-      highlights: "Deteksi anomali gangguan otomatis & visualisasi status node server/jaringan."
+      description: "Platform monitoring infrastruktur router & jaringan real-time via MQTT & SSH. Dilengkapi modul AI Isolation Forest (Flask ML Server) untuk mendeteksi anomali CPU load, lonjakan memori, suhu, dan trafik Rx/Tx secara prediktif.",
+      tech: ["Node.js / Express 5", "Python / Flask", "Isolation Forest ML", "MQTT & SSH2", "MySQL & SQLite", "PDFKit Export"],
+      highlights: "Deteksi anomali trafik real-time berbasis AI (Isolation Forest) & otomasi alerting router."
     },
     {
       title: "Sistem Pendaftaran & Seleksi Anak Magang (Internship Portal)",
@@ -277,15 +277,15 @@ export default function App() {
       highlights: "Alur registrasi, validasi berkas otomatis, filtering status pelamar hingga tahap onboard."
     },
     {
-      title: "Sistem Manajemen Penjualan & Kasir (Point of Sale - POS)",
-      category: "Enterprise & Business Web",
-      badge: "Business Software",
+      title: "Modern POS & Retail Inventory System",
+      category: "Fullstack Web Application",
+      badge: "Enterprise Business Solution",
       icon: ShoppingCart,
       isVerifiedRepo: false,
       repoUrl: "https://github.com/tasyaulfarahmazani",
-      description: "Aplikasi kasir dan manajemen transaksi kasir lengkap. Menangani katalog produk, kalkulasi transaksi instan, cetak struk nota belanja, manajemen stok barang (inventory), serta laporan omset penjualan berkala.",
-      tech: ["PHP / Laravel", "MySQL", "JavaScript", "Thermal Receipt Print", "Inventory Control"],
-      highlights: "Pencatatan kasir cepat, pencegahan stok minus, serta rekapitulasi laba rugi akurat."
+      description: "Sistem kasir retail modern berbasis Single Page Application (SPA). Mendukung multi-tier pricing, pergerakan inventaris realtime (Stock Movement audit log), pencatatan modal kasir harian, serta laporan laba rugi transaksi.",
+      tech: ["Laravel 11 / PHP 8.3", "React 18 & TypeScript", "Inertia.js", "Tailwind CSS v4", "MySQL", "Vite PWA"],
+      highlights: "Arsitektur Fullstack Modern (Laravel + Inertia React TS) dengan fitur Multi-Tier Pricing & Stock Audit."
     },
     {
       title: "Beauty Store: Online Shopping Platform",
@@ -323,13 +323,13 @@ export default function App() {
     {
       title: "Tomato Leaf Disease Classification",
       category: "Computer Vision & ML",
-      badge: "Computer Vision Research",
+      badge: "Published Research Paper",
       icon: Activity,
       isVerifiedRepo: false,
       repoUrl: "https://github.com/tasyaulfarahmazani",
-      description: "Sistem klasifikasi citra penyakit daun tomat berbasis Computer Vision untuk mendeteksi 3 kondisi: Sehat, Infeksi Bakteri, dan Busuk Daun. Menggunakan pipeline ekstraksi fitur warna (RGB Mean & Std Dev) serta analisis tekstur GLCM (Gray-Level Co-occurrence Matrix: Contrast, Dissimilarity, Homogeneity, Energy, Correlation) dengan reduksi dimensi PCA.",
-      tech: ["Python", "OpenCV", "GLCM Texture Extraction", "SVM & Random Forest", "PCA", "Scikit-Learn"],
-      highlights: "Ekstraksi fitur gabungan Warna (RGB) + Tekstur (GLCM) dengan klasifikasi multi-model akurat."
+      description: "Klasifikasi penyakit daun tomat (Sehat, Bakteri, Busuk) berbasis ekstraksi fitur Warna (RGB), Tekstur (GLCM), dan Bentuk. Membandingkan 4 algoritma ML: Random Forest (95.5%), KNN (93.0%), SVM (92.7%), dan Naive Bayes (76.6%).",
+      tech: ["Python", "OpenCV", "GLCM Texture", "Random Forest (95.5%)", "KNN (93%)", "SVM (92.7%)"],
+      highlights: "Akurasi tertinggi 95.5% (Random Forest Ensemble) & F1-Score 0.96 dari riset komparasi 4 model ML."
     },
     {
       title: "Server & Security Infrastructure Management",
