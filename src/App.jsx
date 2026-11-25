@@ -325,8 +325,8 @@ export default function App() {
       category: "Computer Vision & ML",
       badge: "Published Research Paper",
       icon: Activity,
-      isVerifiedRepo: false,
-      repoUrl: "https://github.com/tasyaulfarahmazani",
+      isVerifiedRepo: true,
+      repoUrl: "https://github.com/tasyaulfarahmazani/tomato-leaf-disease-classification",
       description: "Klasifikasi penyakit daun tomat (Sehat, Bakteri, Busuk) berbasis ekstraksi fitur Warna (RGB), Tekstur (GLCM), dan Bentuk. Membandingkan 4 algoritma ML: Random Forest (95.5%), KNN (93.0%), SVM (92.7%), dan Naive Bayes (76.6%).",
       tech: ["Python", "OpenCV", "GLCM Texture", "Random Forest (95.5%)", "KNN (93%)", "SVM (92.7%)"],
       highlights: "Akurasi tertinggi 95.5% (Random Forest Ensemble) & F1-Score 0.96 dari riset komparasi 4 model ML."
