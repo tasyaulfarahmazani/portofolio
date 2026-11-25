@@ -1156,18 +1156,6 @@ export default function App() {
                   </div>
                 </div>
               </div>
-
-              <div className="mt-6 text-center">
-                <a
-                  href="https://github.com/tasyaulfarahmazani"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-mono font-bold text-amber-800 hover:text-amber-950 transition-colors bg-amber-50 hover:bg-amber-100/80 px-4 py-2.5 rounded-xl border border-amber-200 shadow-sm"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  <span>Buka Profil GitHub Resmi (@tasyaulfarahmazani)</span>
-                </a>
-              </div>
             </div>
 
           </div>
