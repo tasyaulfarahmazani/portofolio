@@ -58,6 +58,20 @@ export default function App() {
   const ch3ContainerRef = useRef(null);
   const [ch3Progress, setCh3Progress] = useState(0);
 
+  // Live GitHub Contributions Count
+  const [totalContributions, setTotalContributions] = useState(295);
+
+  useEffect(() => {
+    fetch('https://github-contributions-api.jogruber.de/v4/tasyaulfarahmazani?y=last')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.total && (data.total.lastYear || data.total[new Date().getFullYear()])) {
+          setTotalContributions(data.total.lastYear || data.total[new Date().getFullYear()]);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   // Deteksi scroll untuk navbar dan animasi kartu horizontal Chapter 1 & Chapter 3
   useEffect(() => {
     const handleScroll = () => {
@@ -1091,17 +1105,31 @@ export default function App() {
               </div>
 
               {/* Card 3: Interactive Contribution Heatmap (Kotak-Kotak Hijau Aktivitas GitHub Real-time) */}
-              <div className="mt-6 p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-amber-200/90 shadow-md hover:shadow-xl hover:border-amber-400 transition-all space-y-3">
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-amber-100 pb-3">
+              <div className="mt-6 p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-amber-200/90 shadow-md hover:shadow-xl hover:border-amber-400 transition-all space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-amber-100 pb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <div>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-xl sm:text-2xl font-black font-royal text-slate-900">
+                          {totalContributions.toLocaleString()}
+                        </span>
+                        <span className="text-xs sm:text-sm font-mono font-bold text-slate-700">
+                          contributions in the last year
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-mono text-slate-500 block">
+                        Termasuk kontribusi dari repository publik & private
+                      </span>
+                    </div>
+                  </div>
+                  
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span className="text-xs sm:text-sm font-mono font-bold text-slate-900">
-                      GitHub Contribution Calendar (Public & Private Commits)
+                    <span className="text-xs font-mono text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 font-bold flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Private Contributions Active</span>
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 font-semibold">
-                    Live Git Activity
-                  </span>
                 </div>
                 
                 <div className="w-full overflow-x-auto py-2">
