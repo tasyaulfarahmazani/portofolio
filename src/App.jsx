@@ -511,11 +511,9 @@ export default function App() {
               {/* CTAs */}
               <div className="reveal-init delay-300 pt-2 flex flex-wrap items-center justify-start gap-4">
                 <a
-                  href="#projects"
                   href="#chapter-3"
                   className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-slate-900 font-extrabold text-sm tracking-wider uppercase shadow-md hover:scale-105 transition-transform flex items-center gap-2 border border-amber-300"
                 >
-                  <span>Explore 8+ Projects</span>
                   <span>Explore My Projects</span>
                   <ChevronRight className="w-4 h-4" />
                 </a>
