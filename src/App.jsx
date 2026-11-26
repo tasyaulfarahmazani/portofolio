@@ -69,7 +69,7 @@ export default function App() {
           setTotalContributions(data.total.lastYear || data.total[new Date().getFullYear()]);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   // Deteksi scroll untuk navbar dan animasi kartu horizontal Chapter 1 & Chapter 3
@@ -441,8 +441,8 @@ export default function App() {
       {/* 👑 Royal Sunlit Navbar (Full-width lega & luas, saat di-scroll menjadi frosted glass elegan tanpa menyempit) */}
       <nav
         className={`sticky top-0 z-50 transition-all duration-300 w-full ${isScrolled
-            ? 'backdrop-blur-md bg-[#fffcf7]/92 border-b border-amber-300/60 shadow-[0_4px_25px_rgba(212,175,55,0.12)]'
-            : 'backdrop-blur-sm bg-transparent border-b border-amber-200/40'
+          ? 'backdrop-blur-md bg-[#fffcf7]/92 border-b border-amber-300/60 shadow-[0_4px_25px_rgba(212,175,55,0.12)]'
+          : 'backdrop-blur-sm bg-transparent border-b border-amber-200/40'
           }`}
       >
         <div className="w-full px-6 sm:px-12 lg:px-16 h-20 flex items-center justify-between">
@@ -643,8 +643,8 @@ export default function App() {
                 className="flex gap-6 sm:gap-8 transition-transform duration-100 ease-out will-change-transform"
                 style={{
                   transform: `translateX(${ch1Progress < 0.28
-                      ? 1150
-                      : Math.max(-750, 1150 - (ch1Progress - 0.28) * 3100)
+                    ? 1150
+                    : Math.max(-750, 1150 - (ch1Progress - 0.28) * 3100)
                     }px)`,
                   opacity: ch1Progress < 0.28 ? 0 : Math.min(1, (ch1Progress - 0.28) / 0.05)
                 }}
@@ -806,16 +806,36 @@ export default function App() {
           {/* Pinned Viewport Container */}
           <div className="sticky top-20 h-[calc(100vh-5rem)] w-full overflow-hidden flex flex-col justify-center px-4 sm:px-8 lg:px-12 border-t border-amber-200/50">
 
-            {/* Giant Background Watermark Text "PROJECTS" */}
+            {/* Giant Background Watermark Text "PROJECTS" dengan Efek Perubahan Warna Emas & Rose Mewah */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-              <span
-                className="font-royal text-[16vw] sm:text-[18vw] font-black tracking-widest uppercase text-amber-900/10 transition-transform duration-100 will-change-transform"
+              <div
+                className="font-royal text-[16vw] sm:text-[18vw] font-black tracking-widest uppercase flex transition-transform duration-100 will-change-transform"
                 style={{
                   transform: `translateX(${(ch3Progress - 0.5) * 140}px) scale(${0.96 + ch3Progress * 0.08})`
                 }}
               >
-                PROJECTS
-              </span>
+                {['P', 'R', 'O', 'J', 'E', 'C', 'T', 'S'].map((char, i) => {
+                  // Perubahan warna dinamis saat kartu bergeser berlawanan arah
+                  // Saat user scroll, huruf-huruf secara bertahap berubah warna ke Emas Royal & Rose hangat
+                  const charThreshold = 0.08 + i * 0.11;
+                  const isFilled = ch3Progress >= charThreshold;
+
+                  return (
+                    <span
+                      key={i}
+                      className="inline-block transition-colors duration-500 will-change-transform"
+                      style={{
+                        color: isFilled
+                          ? '#d4af37' // Warna Emas Royal Gold
+                          : 'rgba(120, 53, 15, 0.12)', // Warna pudar dasar yang elegan
+                        textShadow: isFilled ? '0 0 40px rgba(212, 175, 55, 0.25)' : 'none'
+                      }}
+                    >
+                      {char}
+                    </span>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Section Header - Centered Chapter & Title */}
@@ -1121,7 +1141,7 @@ export default function App() {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-mono text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 font-bold flex items-center gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
@@ -1129,7 +1149,7 @@ export default function App() {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="w-full overflow-x-auto py-2">
                   <div className="min-w-[680px] flex justify-center">
                     <img
