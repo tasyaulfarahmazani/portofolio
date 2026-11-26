@@ -368,7 +368,7 @@ export default function App() {
     <div className="relative min-h-screen royal-custom-bg text-slate-800 font-sans cursor-none overflow-x-clip">
 
       {/* 🪄 CUSTOM ROYAL MANHWA CURSOR & SPARKLE TRAILS */}
-      <div className="hidden lg:block pointer-events-none fixed inset-0 z-50">
+      <div className="hidden lg:block pointer-events-none fixed inset-0 z-[9999]">
 
         {/* Trailing Golden Magic Ring */}
         <div

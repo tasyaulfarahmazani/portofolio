@@ -9,6 +9,12 @@
     font-family: 'Comic Neue', 'Plus Jakarta Sans', sans-serif;
     font-size: 1.05rem;
     overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Pastikan kursor bawaan mouse tidak pernah muncul kembali saat hover link atau tombol */
+  a, button, input, textarea, select, [role="button"], nav, nav * {
+    cursor: none !important;
   }
 
   p,
